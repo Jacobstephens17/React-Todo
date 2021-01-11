@@ -1,4 +1,6 @@
 import React from "react";
+import styled from 'styled-components'
+
 
 class ToDoForm extends React.Component {
   constructor() {
@@ -24,12 +26,29 @@ class ToDoForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input value={this.state.inputValue} onChange={this.handleChanges} type="text" name="item" placeholder="Add New Task" />
-        <button>Add</button>
-      </form>
+      <StyledForm onSubmit={this.handleSubmit}>
+        <StyledInput value={this.state.inputValue} onChange={this.handleChanges} type="text" name="item" placeholder="Add New Task" />
+        <StyledButton>Add</StyledButton>
+      </StyledForm>
     );
   }
 }
 
 export default ToDoForm;
+
+
+
+const StyledForm = styled.form`
+display:flex;
+flex-direction:column;
+padding:4rem;
+align-items:center;
+`
+
+const StyledInput = styled.input`
+padding:2rem 10rem;
+`
+
+const StyledButton = styled.button`
+padding:1rem 3rem;
+`

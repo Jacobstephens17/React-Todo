@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoForm from './components/TodoForm';
 import ToDoList from './components/TodoList'
+import styled from 'styled-components'
 
 const tasks = [
   {
@@ -58,15 +59,31 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <AppLayout>
         <div>
-          <h2>Welcome to your Todo App!</h2>
+          <Heading>Welcome to your Todo App!</Heading>
           <ToDoForm handleItemAdd={this.handleItemAdd}/>
         </div>
         <ToDoList tasks={this.state.task} handleItemCompleted={this.handleItemCompleted} handleItemToggle={this.handleItemToggle}/>
-      </div>
+      </AppLayout>
           );
         }
       }
 
 export default App;
+ 
+
+const Heading = styled.h2`
+color:red;
+display:flex;
+flex-direction:column;
+font-size:2rem;
+align-items:center;
+text-align:center;
+`
+
+const AppLayout = styled.div`
+
+background-color:black;
+padding:50rem;
+`
