@@ -13,7 +13,7 @@ const ToDoList = props => {
         <StyledList>
             {props.tasks.map(item => (<Todo handleItemToggle={props.handleItemToggle} key={item.id} item={item} />))}
         </StyledList>
-        <Button onClick={handleClick}>Clear Task</Button>
+        <Button onClick={handleClick}>Clear Completed</Button>
     </StyledDiv>
   );
 };

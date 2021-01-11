@@ -28,7 +28,7 @@ class ToDoForm extends React.Component {
     return (
       <StyledForm onSubmit={this.handleSubmit}>
         <StyledInput value={this.state.inputValue} onChange={this.handleChanges} type="text" name="item" placeholder="Add New Task" />
-        <StyledButton>Add</StyledButton>
+        <StyledButton>Add Task</StyledButton>
       </StyledForm>
     );
   }

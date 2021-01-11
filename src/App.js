@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const tasks = [
   {
     task: "homework",
-    id:124,
+    id:Date.now(),
     completed:false,
   }
 ]
@@ -35,7 +35,7 @@ class App extends React.Component {
   handleItemAdd = (itemName) => {
     const item = {
       task: itemName, 
-      id: this.state.task.length,
+      id: Date.now(),
       completed: false
     };
 
